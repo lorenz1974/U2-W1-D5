@@ -1,0 +1,289 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #191919;
+}
+
+#container {
+    position: relative;
+    /* background-image: url("/mockups/screencapture-desktop.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    position: relative;
+    height: 2000px;
+}
+
+header,
+main,
+footer,
+nav,
+article,
+h1,
+h2,
+h3,
+div,
+ul,
+li,
+p,
+img {
+    border: 1px solid red;
+    min-width: 5px;
+    min-height: 5px;
+}
+
+body,
+#container,
+header,
+main,
+#textualElements,
+footer,
+nav,
+article,
+div,
+ul,
+li {
+    display: flex;
+}
+
+body,
+#container,
+#textualElements {
+    flex-direction: column;
+    justify-items: space-around;
+    flex-shrink: 0;
+}
+
+main {
+    flex-direction: column;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    height: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffc017;
+    padding: 2rem 10%;
+    border-bottom: 1px solid #191919;
+}
+
+.changeBgOnScroll {
+    transition: background-color 0.3s linear;
+}
+
+.changeColorOnScroll {
+    transition: color 0.3s linear;
+}
+
+header img {
+    width: 150px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+#upperNav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 5px;
+}
+
+#upperNav ul li {
+    list-style-type: none;
+}
+
+#upperNav ul li {
+    text-decoration: none;
+    color: #191919;
+    margin-left: 1em;
+}
+
+#upperNav a {
+    color: #191919;
+    text-decoration: none;
+}
+
+#getStarted {
+    background-color: #191919;
+    border: none;
+    margin-left: .5rem;
+    padding: .9rem;
+    border-radius: 2rem;
+}
+
+#getStarted a {
+    color: white;
+}
+
+#stayCurious {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #ffc017;
+    height: 565px;
+    padding-left: 10%;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+}
+
+
+#stayCurious #textualElements h1 {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: "Spectral", sans-serif;
+    font-size: 8rem;
+    padding-bottom: 0.2em;
+    padding-top: 100px;
+}
+
+#stayCurious #imgElements img {
+    height: 550px;
+}
+
+#stayCurious #textualElements div:nth-of-type(1) {
+    width: 500px;
+    font-size: 1.6rem;
+    font-weight: 400;
+
+}
+
+#stayCurious #textualElements div:nth-of-type(2) {
+    width: fit-content;
+    margin-top: 2rem;
+    padding: 1rem 4rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    background: #191919;
+    border-radius: 30px;
+}
+
+#trendingOnMedium {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#trendingTitleAndCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+}
+
+#trendingTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 90px;
+}
+
+#trendingTitle h2 {
+    font-weight: bold;
+    padding: 1rem 0 1rem 4.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-image: url("/assets/imgs/svg/trending.svg");
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: 20px 5px;
+}
+
+#trendingNewsCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.trendingCard {
+    border: 1px solid greenyellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin: .3rem 0 1.6rem 0;
+}
+
+.trendingCardNumber {
+    display: block;
+    text-align: center;
+    flex-shrink: 0;
+    width: 80px;
+    color: #E6E7E7;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.trendingCardText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 400px;
+}
+
+.trendingCardAuthor {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 9px;
+    font-weight: bold;
+}
+
+.trendingCardAuthor img {
+    margin-left: 6px;
+    margin-right: 10px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+}
+
+.trendingCardAuthor p:nth-of-type(2) {
+    color: #7e7e7e;
+    margin: 0 .2rem;
+}
+
+.trendingCardTitle {
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1.34rem;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.trendingCardMeta {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.trendingCardMeta div:nth-of-type(1) {
+    margin-right: 16px;
+}
+
+
+.bgGreen {
+    background-color: #1a8917;
+}
+
+.bgWhite {
+    background-color: white;
+}
+
+.clBlack {
+    color: #191919;
+}
