@@ -47,6 +47,10 @@ li {
     list-style-type: none;
 }
 
+li a {
+    text-decoration: none;
+}
+
 #container {
     flex-direction: column;
 
@@ -543,8 +547,17 @@ header {
     font-size: 0.8rem;
 }
 
+#argumentsCloud ul li a,
+#lastNav ul li a {
+    color: #757575;
+}
 
 /* Media Queries --------------------------------------------------------------*/
+/*
+Le impostazioni degli stili partono dalla versione desktop quindi ho dovuto prendere
+ in cosiderazione anche la dimensione massima dello schermo, in modo da poter
+ gestire la visualizzazione tra due intervalli.
+*/
 @media screen and (min-width: 1080px) {
     .trendingCard {
         width: 30%;
@@ -649,7 +662,6 @@ header {
 
     #textualElements div:nth-of-type(1) {
         width: 100%;
-
     }
 
     #textualElements h1 {
