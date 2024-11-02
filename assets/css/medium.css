@@ -9,6 +9,7 @@ html {
 header,
 main,
 footer,
+aside,
 nav,
 article,
 h1,
@@ -16,9 +17,10 @@ h2,
 h3,
 div,
 ul,
+li,
 p,
 img {
-    border: 1px solid transparent;
+    /* border: 1px solid red; */
 }
 
 body,
@@ -292,10 +294,16 @@ header {
     text-wrap: nowrap;
 }
 
-.trendingCardAuthor img {
+.roundedIcon {
     width: 20px;
     margin-right: .5rem;
     border-radius: 50%;
+}
+
+.squaredIcon {
+    width: 20px;
+    margin-right: .5rem;
+    border-radius: 5px;
 }
 
 .trendingCardAuthor p:nth-of-type(2) {
@@ -386,7 +394,7 @@ header {
 
 .firstColumnArticle {
     /* border: 1px solid greenyellow; */
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -408,7 +416,7 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-top: .7rem;
+    margin-top: .5rem;
     font-size: .8rem;
     font-weight: bold;
 }
@@ -428,12 +436,14 @@ header {
     font-size: 1.3rem;
     font-weight: 700;
     line-height: 1.34rem;
-    margin-top: .3rem;
+    margin-top: .7rem;
     width: 100%;
 }
 
 .firstColumnArticleExcerpt {
-    font-size: 1rem;
+    margin-top: .5rem;
+    margin-right: 1.5rem;
+    line-height: 1.3rem;
     color: #757575;
 }
 
@@ -443,6 +453,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-top: .5rem;
 }
 
 .firstColumnArticleMeta {
@@ -451,7 +462,6 @@ header {
     justify-content: flex-start;
     align-items: center;
     font-size: 1rem;
-    margin-top: .3rem;
     font-size: .8rem;
 }
 
@@ -486,7 +496,7 @@ header {
 }
 
 #secondColumn aside {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 #secondColumn aside h2 {
@@ -612,7 +622,7 @@ header {
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 551px) {
+@media screen and (max-width: 551px) {
 
     #upperNav ul li {
         margin: 0;
@@ -663,5 +673,9 @@ header {
 
     .firstColumnArticleText {
         width: 100%;
+    }
+
+    #seeMoreTopics {
+        display: none;
     }
 }
