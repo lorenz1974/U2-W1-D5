@@ -43,6 +43,10 @@ body {
     justify-content: center;
 }
 
+li {
+    list-style-type: none;
+}
+
 #container {
     flex-direction: column;
 
@@ -113,11 +117,6 @@ header {
 }
 
 #upperNav ul li {
-    list-style-type: none;
-}
-
-#upperNav ul li {
-    text-decoration: none;
     color: #191919;
     margin-left: 1.8rem;
 }
@@ -160,18 +159,18 @@ header {
     max-width: 1400px;
 }
 
-#divStayCurious #textualElements h1 {
+#textualElements h1 {
     font-family: "Spectral", sans-serif;
     font-weight: 500;
     font-size: 6.4rem;
     padding-top: 5.6rem;
 }
 
-#divStayCurious #imgElements {
+#imgElements {
     width: 600px;
 }
 
-#divStayCurious #textualElements div:nth-of-type(1) {
+#textualElements div:nth-of-type(1) {
     width: 30rem;
     font-size: 1.6rem;
     font-weight: 400;
@@ -179,7 +178,7 @@ header {
 
 }
 
-#divStayCurious #textualElements div:nth-of-type(2) {
+#textualElements div:nth-of-type(2) {
     width: fit-content;
     margin-top: 3rem;
     padding: .8rem 3.5rem;
@@ -190,7 +189,7 @@ header {
     border-radius: 30px;
 }
 
-#divStayCurious #textualElements a {
+#textualElements a {
     color: white;
     text-decoration: none;
 }
@@ -516,9 +515,6 @@ header {
 }
 
 #argumentsCloud ul li {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin: .2rem;
@@ -541,9 +537,6 @@ header {
 }
 
 #lastNav ul li {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin: .8rem 1rem;
@@ -591,7 +584,7 @@ header {
         width: 100%;
     }
 
-    #divStayCurious #imgElements {
+    #imgElements {
         display: none;
     }
 
@@ -609,11 +602,11 @@ header {
         width: 95%;
     }
 
-    #divStayCurious #textualElements {
+    #textualElements {
         flex-wrap: wrap;
     }
 
-    #divStayCurious #textualElements h1 {
+    #textualElements h1 {
         font-size: 5rem;
     }
 
@@ -632,7 +625,7 @@ header {
         width: 100%;
     }
 
-    #divStayCurious #imgElements {
+    #imgElements {
         display: none;
     }
 
@@ -650,16 +643,16 @@ header {
         width: 95%;
     }
 
-    #divStayCurious #textualElements {
+    #textualElements {
         flex-shrink: 1;
     }
 
-    #divStayCurious #textualElements div:nth-of-type(1) {
+    #textualElements div:nth-of-type(1) {
         width: 100%;
 
     }
 
-    #divStayCurious #textualElements h1 {
+    #textualElements h1 {
         font-size: 5rem;
     }
 
