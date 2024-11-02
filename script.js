@@ -2,9 +2,8 @@ window.addEventListener('scroll', function () {
     const scrollPosition = window.scrollY;
     const header = document.getElementsByTagName('header')[0]
     const liGetStarted = document.querySelector('#getStarted')
-    const aGetStarted = document.querySelector('#getStarted a')
 
-    const stayCuriousHeight = parseInt(getComputedStyle(document.getElementById('stayCurious')).height)
+    const stayCuriousHeight = parseInt(getComputedStyle(document.getElementById('sectionStayCurious')).height)
     const percentOfStayCurious = .70
 
     if (scrollPosition > stayCuriousHeight * percentOfStayCurious) {
