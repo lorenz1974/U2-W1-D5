@@ -5,17 +5,6 @@ html {
     color: #191919;
 }
 
-#container {
-    position: relative;
-    /* background-image: url("/mockups/screencapture-desktop.png"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    z-index: 10;
-    position: relative;
-    height: 2000px;
-}
 
 header,
 main,
@@ -30,15 +19,14 @@ ul,
 li,
 p,
 img {
-    border: 1px solid red;
-    min-width: 5px;
-    min-height: 5px;
+    border: 1px solid red
 }
 
 body,
 #container,
 header,
 main,
+section,
 #textualElements,
 footer,
 nav,
@@ -53,22 +41,40 @@ body,
 #container,
 #textualElements {
     flex-direction: column;
-    justify-items: space-around;
     flex-shrink: 0;
 }
 
+body {
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* #container {
+    position: absolute;
+    background-image: url("/mockups/screencapture-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1600px;
+    height: 2500px;
+} */
+
 main {
     flex-direction: column;
+    align-items: center;
 }
 
 header {
     position: sticky;
     top: 0;
-    height: 30px;
+    height: .7rem;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     background-color: #ffc017;
-    padding: 2rem 10%;
+    padding: 2rem;
     border-bottom: 1px solid #191919;
 }
 
@@ -80,10 +86,18 @@ header {
     transition: color 0.3s linear;
 }
 
-header img {
-    width: 150px;
-    height: 25px;
-    vertical-align: middle;
+#logoAndNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    background-color: #ffc017;
+}
+
+#logoAndNav img {
+    width: 170px;
 }
 
 #upperNav ul {
@@ -91,7 +105,8 @@ header img {
     justify-content: space-around;
     align-items: center;
     flex-shrink: 0;
-    padding-top: 5px;
+    padding-top: .2rem;
+    font-size: .9rem;
 }
 
 #upperNav ul li {
@@ -101,7 +116,7 @@ header img {
 #upperNav ul li {
     text-decoration: none;
     color: #191919;
-    margin-left: 1em;
+    margin-left: 1.8rem;
 }
 
 #upperNav a {
@@ -113,7 +128,7 @@ header img {
     background-color: #191919;
     border: none;
     margin-left: .5rem;
-    padding: .9rem;
+    padding: .5rem;
     border-radius: 2rem;
 }
 
@@ -121,42 +136,53 @@ header img {
     color: white;
 }
 
-#stayCurious {
+#sectionStayCurious {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #ffc017;
+}
+
+#divStayCurious {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: #ffc017;
-    height: 565px;
-    padding-left: 10%;
-    border-bottom: 1px solid #000;
+    align-items: center;
+    height: 30rem;
+    border-bottom: 1px solid #191919;
     overflow: hidden;
+    width: 100%;
+    max-width: 1400px;
 }
 
-
-#stayCurious #textualElements h1 {
+#divStayCurious #textualElements h1 {
     display: flex;
     flex-wrap: nowrap;
     font-family: "Spectral", sans-serif;
-    font-size: 8rem;
-    padding-bottom: 0.2em;
-    padding-top: 100px;
+    font-weight: 500;
+    font-size: 6.4rem;
+    padding-top: 5.6rem;
+    transform: scale(1, 1.2);
 }
 
-#stayCurious #imgElements img {
-    height: 550px;
+#divStayCurious #imgElements {
+    width: 600px;
 }
 
-#stayCurious #textualElements div:nth-of-type(1) {
-    width: 500px;
+#divStayCurious #textualElements div:nth-of-type(1) {
+    width: 30rem;
     font-size: 1.6rem;
     font-weight: 400;
+    margin-top: 2.4rem;
 
 }
 
-#stayCurious #textualElements div:nth-of-type(2) {
+#divStayCurious #textualElements div:nth-of-type(2) {
     width: fit-content;
-    margin-top: 2rem;
-    padding: 1rem 4rem;
+    margin-top: 3rem;
+    padding: .8rem 3.5rem;
     font-size: 1.2rem;
     text-align: center;
     color: white;
@@ -164,11 +190,27 @@ header img {
     border-radius: 30px;
 }
 
-#trendingOnMedium {
+#divStayCurious #textualElements a {
+    color: white;
+    text-decoration: none;
+}
+
+#sectionTrendingOnMedium {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #191919;
+}
+
+#divTrendingOnMedium {
+    display: flex;
+    flex-direction: colomn;
+    justify-content: center;
     align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
 }
 
 #trendingTitleAndCards {
@@ -176,7 +218,7 @@ header img {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 80%;
+    padding-bottom: 2.8rem;
 }
 
 #trendingTitle {
@@ -184,18 +226,20 @@ header img {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    height: 90px;
+    height: 3.8rem;
 }
 
 #trendingTitle h2 {
+    padding-top: 1rem;
     font-weight: bold;
-    padding: 1rem 0 1rem 4.5rem;
+    padding-left: 3.5rem;
     text-transform: uppercase;
+    font-size: .8rem;
     letter-spacing: 1px;
     background-image: url("/assets/imgs/svg/trending.svg");
     background-repeat: no-repeat;
-    background-size: 35px;
-    background-position: 20px 5px;
+    background-size: 30px;
+    background-position: 15px 1px;
 }
 
 #trendingNewsCards {
@@ -204,26 +248,27 @@ header img {
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 .trendingCard {
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     flex-grow: 1;
-    margin: .3rem 0 1.6rem 0;
+    margin-top: .6rem;
+    margin-right: 1.5rem;
+
 }
 
 .trendingCardNumber {
     display: block;
     text-align: center;
     flex-shrink: 0;
-    width: 80px;
+    width: 4rem;
     color: #E6E7E7;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     font-weight: 900;
 }
 
@@ -232,7 +277,8 @@ header img {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 400px;
+    width: 20rem;
+    padding-left: .3rem;
 }
 
 .trendingCardAuthor {
@@ -240,15 +286,15 @@ header img {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 9px;
+    margin-top: .7rem;
+    font-size: .8rem;
     font-weight: bold;
+
 }
 
 .trendingCardAuthor img {
-    margin-left: 6px;
-    margin-right: 10px;
-    width: 23px;
-    height: 23px;
+    margin-right: .5rem;
+    width: 20px;
     border-radius: 50%;
 }
 
@@ -258,23 +304,34 @@ header img {
 }
 
 .trendingCardTitle {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 900;
     line-height: 1.34rem;
-    margin-top: 15px;
-    margin-left: 10px;
+    margin-top: .3rem;
 }
 
 .trendingCardMeta {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 1rem;
-    margin-top: 20px;
-    margin-left: 10px;
+    margin-top: .3rem;
+    font-size: .8rem;
 }
 
 .trendingCardMeta div:nth-of-type(1) {
-    margin-right: 16px;
+    margin-right: 5px;
 }
 
+.trendingCardMeta div:nth-of-type(2)::before {
+    content: "•";
+    margin-right: 5px;
+}
+
+.trendingCardMeta img {
+    margin-left: 5px;
+}
 
 .bgGreen {
     background-color: #1a8917;
@@ -286,4 +343,23 @@ header img {
 
 .clBlack {
     color: #191919;
+}
+
+
+/* PARTE BASSA ----------------------------------------------------------------------------------*/
+
+#downSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 80%;
+}
+
+#firstColumn,
+#secondColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
