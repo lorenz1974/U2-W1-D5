@@ -5,7 +5,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "",
         itemTitle: "Our Story",
-        itemLink: "#",
+        itemLink: "https://medium.com/about?autoplay=1",
         itemLinkClass: "",
         itemLinkId: "",
         order: 1
@@ -16,7 +16,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "",
         itemTitle: "Membership",
-        itemLink: "#",
+        itemLink: "https://medium.com/membership",
         itemLinkClass: "",
         itemLinkId: "",
         order: 2
@@ -27,7 +27,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "",
         itemTitle: "Write",
-        itemLink: "#",
+        itemLink: "https://medium.com/m/signin?operation=register&redirect=https%3A%2F%2Fmedium.com%2Fnew-story&source=--------------------------new_post_topnav-----------",
         itemLinkClass: "",
         itemLinkId: "",
         order: 3
@@ -38,7 +38,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "",
         itemTitle: "Sign In",
-        itemLink: "#",
+        itemLink: "https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2F&source=--------------------------lo_home_nav-----------",
         itemLinkClass: "",
         itemLinkId: "",
         order: 4
@@ -49,7 +49,7 @@ const CONTENTS = [
         itemId: "getStarted",
         itemClass: "changeBgOnScroll",
         itemTitle: "Get Started",
-        itemLink: "#",
+        itemLink: "https://medium.com/m/signin?operation=register&redirect=https%3A%2F%2Fmedium.com%2F&source=--------------------------lo_home_nav-----------",
         itemLinkClass: "changeColorOnScroll",
         itemLinkId: "",
         order: 5
@@ -159,7 +159,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Help",
-        itemLink: "#",
+        itemLink: "https://help.medium.com/hc/en-us",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 1
@@ -170,7 +170,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Status",
-        itemLink: "#",
+        itemLink: "https://medium.statuspage.io/",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 2
@@ -181,7 +181,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Writers",
-        itemLink: "#",
+        itemLink: "https://medium.com/m/signin?operation=register&redirect=https%3A%2F%2Fmedium.com%2Fnew-story&source=--------------------------new_post_topnav-----------",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 3
@@ -192,7 +192,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Blog",
-        itemLink: "#",
+        itemLink: "https://blog.medium.com/",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 4
@@ -203,7 +203,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Careers",
-        itemLink: "#",
+        itemLink: "https://medium.com/jobs-at-medium/work-at-medium-959d1a85284e",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 5
@@ -214,7 +214,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Privacy",
-        itemLink: "#",
+        itemLink: "https://policy.medium.com/medium-privacy-policy-f03bf92035c9",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 6
@@ -225,7 +225,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Terms",
-        itemLink: "#",
+        itemLink: "https://policy.medium.com/medium-terms-of-service-9db0094a1e0f",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 7
@@ -236,7 +236,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "About",
-        itemLink: "#",
+        itemLink: "https://medium.com/about?autoplay=1",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 7
@@ -247,7 +247,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Knowable",
-        itemLink: "#",
+        itemLink: "https://medium.com/business",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 8
