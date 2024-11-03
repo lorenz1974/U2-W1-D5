@@ -395,6 +395,8 @@ header {
 
 #secondColumn {
     justify-content: flex-end;
+    position: sticky;
+    top: 0;
 }
 
 .firstColumnArticle {
@@ -571,6 +573,8 @@ Le impostazioni degli stili partono dalla versione desktop quindi ho dovuto pren
 
     #secondColumn {
         width: 40%;
+        position: sticky;
+        top: 2.5rem;
     }
 }
 
@@ -582,6 +586,10 @@ Le impostazioni degli stili partono dalla versione desktop quindi ho dovuto pren
     #divArticles {
         flex-direction: column-reverse;
     }
+
+    #secondColumn {
+        position: unset;
+    }
 }
 
 @media screen and (min-width: 727px) and (max-width: 903px) {
@@ -591,6 +599,10 @@ Le impostazioni degli stili partono dalla versione desktop quindi ho dovuto pren
 
     #divArticles {
         flex-direction: column-reverse;
+    }
+
+    #secondColumn {
+        position: unset;
     }
 }
 
@@ -627,6 +639,10 @@ Le impostazioni degli stili partono dalla versione desktop quindi ho dovuto pren
 
     #divArticles {
         flex-direction: column-reverse;
+    }
+
+    #secondColumn {
+        position: unset;
     }
 }
 
@@ -684,5 +700,9 @@ Le impostazioni degli stili partono dalla versione desktop quindi ho dovuto pren
 
     #seeMoreTopics {
         display: none;
+    }
+
+    #secondColumn {
+        position: unset;
     }
 }
