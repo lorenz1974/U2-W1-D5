@@ -301,7 +301,6 @@ const CONTENTS = [
         category: "",
         inPublication: "Slackjaw",
         titleLink: "",
-
         star: false,
         type: "article",
         order: 3,
@@ -428,7 +427,6 @@ const CONTENTS = [
         imgSrc: "/assets/imgs/image14.png",
         inPublication: "",
         titleLink: "",
-
         star: false,
         type: "article",
         order: 4,
@@ -483,7 +481,6 @@ const CONTENTS = [
         imgSrc: "/assets/imgs/image20.jpg",
         inPublication: "",
         titleLink: "",
-
         star: false,
         type: "article",
         order: 7,
