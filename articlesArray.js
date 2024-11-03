@@ -60,7 +60,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Programming",
-        itemLink: "#",
+        itemLink: "https://medium.com/tag/programming",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 1
@@ -70,8 +70,8 @@ const CONTENTS = [
         parentId: "argumentsCloud",
         itemId: "",
         itemClass: "navItem",
-        itemTitle: "Datat Science",
-        itemLink: "#",
+        itemTitle: "Data Science",
+        itemLink: "https://medium.com/tag/data-science",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 2
@@ -82,7 +82,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "technology",
-        itemLink: "#",
+        itemLink: "https://medium.com/tag/technology",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 3
@@ -93,7 +93,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Self Improvement",
-        itemLink: "#",
+        itemLink: "https://medium.com/tag/self-improvement",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 4
@@ -104,7 +104,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Writing",
-        itemLink: "#",
+        itemLink: "https://medium.com/tag/writing",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 5
@@ -115,7 +115,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Relationships",
-        itemLink: "#",
+        itemLink: "https://medium.com/tag/relationships",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 6
@@ -126,7 +126,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Machine Learning",
-        itemLink: "#",
+        itemLink: "https://medium.com/tag/machine-learning",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 7
@@ -137,7 +137,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Productivity",
-        itemLink: "#",
+        itemLink: "https://medium.com/tag/productivity",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 8
@@ -148,7 +148,7 @@ const CONTENTS = [
         itemId: "",
         itemClass: "navItem",
         itemTitle: "Politics",
-        itemLink: "#",
+        itemLink: "https://medium.com/tag/politics",
         itemLinkClass: "navItemLink",
         itemLinkId: "",
         order: 9
