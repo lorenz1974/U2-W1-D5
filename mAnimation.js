@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const svgDoc = svgEmbed.getSVGDocument();
 
         // Seleziona tutti gli elementi <g> che hanno l'attributo opacity = 1
+        // e li metto dentro un array che è comodo per manipolare gli elementi
         let groups = Array.from(svgDoc.querySelectorAll('g[opacity="1"]'));
 
         // Definisce una costante per la percentuale di elementi da selezionare
