@@ -36,7 +36,16 @@ const getHTMLFromTemplate = (template, data) => {
     let html = '';
     switch (template) {
         case 'trendingNewsCards': {
-            // Usare index per indicizzare gli articoli
+
+            //
+            // Inserita anche la funzione "Mi sento fortunato" de' noantri usando il "Feeling LUcky"
+            // di Google. Se l'utente clicca sul titolo dell'articolo, verrà reindirizzato alla
+            // pagina più probabile in base all'autore e al titolo su Medium.com
+            //
+            // RISULTATO: NON NE PRENDE UNAAAAA!!! :D :D :D
+            // Mah! Forse un paio! :D
+            //
+
             html = `
             <!-------------------------------------------------------------------->
             <!-- START CARD ${pad(data.order, 2)} -->
@@ -45,11 +54,28 @@ const getHTMLFromTemplate = (template, data) => {
                 <div class="trendingCardNumber">${pad(data.order, 2)}</div>
                 <div class="trendingCardText">
                     <div class="trendingCardAuthor">
-                        <img class="${data.authorImgShape}Icon" src="${data.authorImgSrc}" alt="Image for author ${escapeHTML(data.author)}">
-                        <p>${escapeHTML(data.author)}</p> ${data.inPublication ? `<p>in</p> <p>${escapeHTML(data.inPublication)}</p>` : ''}
+                        <img class="${data.authorImgShape}Icon"
+                            src="${data.authorImgSrc}"
+                            alt="Image for author ${escapeHTML(data.author)}">
+                        <p>
+
+                        ${data.authorLink !== ''
+                    ? '<a href="' + data.authorLink + '">' + escapeHTML(data.author) + '</a>'
+                    : '<a href="//www.google.com/search?q=' + escapeHTML(data.author) + ' +site:medium.com&btnI=1">' + escapeHTML(data.author) + '</a>'
+                }
+
+                        </p>
+                        ${data.inPublication ? `<p>in</p> <p><a href="https://medium.com/${escapeHTML(data.inPublication).replace(' ', '-').toLowerCase()}">${escapeHTML(data.inPublication)}</a></p>` : ''}
                     </div>
                     <div class="trendingCardTitle">
-                        <h3>${escapeHTML(data.title)}</h3>
+                        <h3>
+
+                        ${data.titleLink !== ''
+                    ? '<a href="' + data.titleLink + '">' + data.title + '</a>'
+                    : '<a href="//www.google.com/search?q=' + escapeHTML(data.author) + ' ' + escapeHTML(data.title) + ' +site:medium.com&btnI=1">' + escapeHTML(data.title) + '</a>'
+                }
+
+                        </h3>
                     </div>
                     <div class="trendingCardMeta">
                         <div>${escapeHTML(data.date)}</div>
@@ -73,11 +99,26 @@ const getHTMLFromTemplate = (template, data) => {
             <article class="firstColumnArticle">
                 <div class="firstColumnArticleText">
                     <div class="trendingCardAuthor">
-                        <img class="${data.authorImgShape}Icon" src="${data.authorImgSrc}" alt="Image for author ${escapeHTML(data.author)}">
-                        <p>${escapeHTML(data.author)}</p>
+                        <img class="${data.authorImgShape}Icon"
+                            src="${data.authorImgSrc}"
+                            alt="Image for author ${escapeHTML(data.author)}">
+                        <p>
+
+                        ${data.authorLink !== ''
+                    ? '<a href="' + data.authorLink + '">' + escapeHTML(data.author) + '</a>'
+                    : '<a href="//www.google.com/search?q=' + escapeHTML(data.author) + ' +site:medium.com&btnI=1">' + escapeHTML(data.author) + '</a>'
+                }
+                        </p>
                     </div>
                     <div class="firstColumnArticleTitle">
-                        <h3>${escapeHTML(data.title)}</h3>
+                        <h3>
+
+                    ${data.titleLink !== ''
+                    ? '<a href="' + data.titleLink + '">' + data.title + '</a>'
+                    : '<a href="//www.google.com/search?q=' + escapeHTML(data.author) + ' ' + escapeHTML(data.title) + ' +site:medium.com&btnI=1">' + escapeHTML(data.title) + '</a>'
+                }
+
+                        </h3>
                     </div>
                     <div class="firstColumnArticleExcerpt">
                         <p>${escapeHTML(data.excerpt)}</p>
@@ -86,7 +127,11 @@ const getHTMLFromTemplate = (template, data) => {
                         <div class="firstColumnArticleMeta">
                             <div>${escapeHTML(data.date)}</div>
                             <div>${escapeHTML(data.readTime)}</div>
-                            <div>${escapeHTML(data.category)}</div>
+                            <div>
+                                <a href="https://medium.com/${escapeHTML(data.category).replace(' ', '-').toLowerCase()}">
+                                    ${escapeHTML(data.category)}
+                                </a>
+                            </div>
                             ${data.star ? '<img src="/assets/imgs/svg/star.svg" alt="Star">' : ''}
                         </div>
                         <div class="firstColumnArticleBookmark">
@@ -228,5 +273,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // che è un array di dati e impostazioni per i contenuti della pagina
 
     createPageElements(CONTENTS);
+
+
+    // EventListener per lo scroll della pagina
+    // Uso una percenttuale del 70% dell'altezza della sezione 'Stay Curious'
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        const header = document.getElementsByTagName('header')[0]
+        const liGetStarted = document.querySelector('#getStarted')
+
+        const stayCuriousHeight = parseInt(getComputedStyle(document.getElementById('sectionStayCurious')).height)
+        const percentOfStayCurious = .70
+
+        if (scrollPosition > stayCuriousHeight * percentOfStayCurious) {
+            header.classList.add('bgWhite')
+
+            liGetStarted.style.background = 'green'
+        } else {
+            header.classList.remove('bgWhite')
+            liGetStarted.style.background = '#191919'
+        }
+    })
 
 });
